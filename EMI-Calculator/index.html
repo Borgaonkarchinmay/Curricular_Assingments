@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>EMI Calculator</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+    </head>
+    
+    <body>
+        <div id = "emi-cal">
+            <div id = "box-header"><h2>EMI Calculator</h2></div>
+            <hr>
+            <p>Loan Amount (INR):</p>
+            <input type = "number" id="amt" placeholder="e.g. INR 1000000">
+            <p>Interest Rate (%):</p>
+            <input type = "number" id = "roi" placeholder="e.g 6.5% per year">
+            <p>Tenure (In months):</p>
+            <input type = "number" id = "tenure" placeholder="e.g 12 months">
+            <footer>
+                <button onclick="computeEMI()" class = "btn">Compute EMI</button>
+            </footer>
+        </div>
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                </div>
+
+                <!-- Computation Results -->
+                <div class = "compute-res">
+                    <b><label>Monthly &nbsp Payment:</label></b>
+                    <p id = "monthlyPayment"></p>
+                    <b><label>Monthly &nbsp Interest:</label></b>
+                    <p id = "monthlyInterest"></p>
+                    <b><label>Total &nbsp InterestCost</label></b>
+                    <p id = "totalInterestCost"></p>
+                    <b><label>Total &nbsp Payable</label></b>
+                    <p id = "totalPayable"></p>
+                </div>
+            
+            </div>
+        
+        </div>
+        
+    </body>
+</html>
